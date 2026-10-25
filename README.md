@@ -4,7 +4,7 @@ This is a small, runnable first pass for the [Kaggle NYC Taxi Trip Duration comp
 
 ## Notebooks
 
-- [02_model_comparison.ipynb](02_model_comparison.ipynb) — a separate, self-contained Kaggle-ready notebook comparing three models on the same validation set, then saving `/kaggle/working/submission.csv`. You can also [open it in Kaggle](https://www.kaggle.com/code/punkharb/nyc-taxi-trip-duration-model-comparison) to run and submit it from your account.
+- [02_model_comparison.ipynb](02_model_comparison.ipynb) — a self-contained Kaggle notebook that starts with data inspection and EDA, explains the features, compares three models on the same validation set, then saves `/kaggle/working/submission.csv`. You can also [open it in Kaggle](https://www.kaggle.com/code/punkharb/nyc-taxi-trip-duration-model-comparison) to run and submit it from your account.
 - [nyc_taxi_trip_duration.ipynb](nyc_taxi_trip_duration.ipynb) — the end-to-end pipeline that refits the selected model and creates the Kaggle submission. Keep `model_comparison.py` beside this notebook when running it.
 
 ## What I did
@@ -25,7 +25,7 @@ This is a small, runnable first pass for the [Kaggle NYC Taxi Trip Duration comp
 
 The earlier single-model experiment trained Gradient Boosting on 300,000 trips and scored 0.42871 on validation; that result is not directly comparable to the shared-150k table. Random Forest won this comparison, but its much lower train score signals overfitting. The 500,000-trip final refit has no separate validation score. The notebook checks output row count, ID order, finite values, and nonnegative predictions.
 
-These scores were recorded from the local run. Notebook outputs are cleared in Git to keep the repository compact; rerunning the notebook reproduces the local validation comparison.
+These scores were recorded from the local run. The Kaggle notebook calculates its own score table, which can differ slightly by environment. Notebook outputs are cleared in Git to keep the repository compact.
 
 A **late practice submission** of the selected Random Forest scored **0.41798 public / 0.41583 private** (25 October 2026), improving on the earlier Gradient Boosting submission's **0.43193 public / 0.42971 private** (23 October 2026). These are practice scores, not original 2017 contest placements.
 
