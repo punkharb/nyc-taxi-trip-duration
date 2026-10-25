@@ -4,7 +4,7 @@ This is a small, runnable first pass for the [Kaggle NYC Taxi Trip Duration comp
 
 ## Notebooks
 
-- [02_model_comparison.ipynb](02_model_comparison.ipynb) — a separate, self-contained lesson comparing three models on the same validation set. Start here if you want to understand **why** Random Forest was selected.
+- [02_model_comparison.ipynb](02_model_comparison.ipynb) — a separate, self-contained Kaggle-ready notebook comparing three models on the same validation set, then saving `/kaggle/working/submission.csv`. You can also [open it in Kaggle](https://www.kaggle.com/code/punkharb/nyc-taxi-trip-duration-model-comparison) to run and submit it from your account.
 - [nyc_taxi_trip_duration.ipynb](nyc_taxi_trip_duration.ipynb) — the end-to-end pipeline that refits the selected model and creates the Kaggle submission. Keep `model_comparison.py` beside this notebook when running it.
 
 ## What I did
@@ -47,3 +47,5 @@ A **late practice submission** of the selected Random Forest scored **0.41798 pu
 Keep `model_comparison.py` beside `nyc_taxi_trip_duration.ipynb`. Locally, put `train.csv` and `test.csv` under `data/` (or their single-CSV ZIP files) and run the notebook from this folder. On Kaggle, attach the competition data and make `model_comparison.py` available in the notebook's working directory before running it. The notebook saves `output/submission_random_forest.csv` locally or `/kaggle/working/submission_random_forest.csv` on Kaggle when Random Forest wins. Raw data and predictions are ignored by Git.
 
 For a local run, use Python 3.10+ and install `numpy`, `pandas`, `scikit-learn`, and `jupyter`. Install `pytest` too if you want to run `python -m pytest tests -q`. Kaggle notebooks already provide the modeling libraries.
+
+The [Kaggle notebook](https://www.kaggle.com/code/punkharb/nyc-taxi-trip-duration-model-comparison) has a completed run with `submission.csv` in its output. Open that notebook and use Kaggle's **Submit to Competition** action to submit the generated file from your account. The notebook checks both common Kaggle competition-input locations before loading the files.
