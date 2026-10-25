@@ -2,6 +2,11 @@
 
 This is a small, runnable first pass for the [Kaggle NYC Taxi Trip Duration competition](https://www.kaggle.com/competitions/nyc-taxi-trip-duration). The goal is to predict each trip's duration in seconds. The 2017 competition is closed, but Kaggle currently labels its practice uploads **Late Submission**.
 
+## Notebooks
+
+- [02_model_comparison.ipynb](02_model_comparison.ipynb) — a separate, self-contained lesson comparing three models on the same validation set. Start here if you want to understand **why** Random Forest was selected.
+- [nyc_taxi_trip_duration.ipynb](nyc_taxi_trip_duration.ipynb) — the end-to-end pipeline that refits the selected model and creates the Kaggle submission. Keep `model_comparison.py` beside this notebook when running it.
+
 ## What I did
 
 1. Checked the real train and test files: 1,458,644 labeled trips and 625,134 test trips. Both cover January–June 2016, and the train file has no missing values.
