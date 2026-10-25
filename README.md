@@ -29,6 +29,12 @@ These scores were recorded from the local run. The Kaggle notebook calculates it
 
 A **late practice submission** of the selected Random Forest scored **0.41798 public / 0.41583 private** (25 October 2026), improving on the earlier Gradient Boosting submission's **0.43193 public / 0.42971 private** (23 October 2026). These are practice scores, not original 2017 contest placements.
 
+## What I learned
+
+- The median ride is about 11 minutes, while the 99th percentile is about 57 minutes. Long trips make the target distribution uneven.
+- Pickup hour changes both trip volume and typical duration. Straight-line distance also has a clear relationship with duration, so both are useful starting features.
+- Random Forest had the best score on this validation split, but its much lower training error warns that it has learned some training-specific patterns.
+
 ## How this differs from the previous projects
 
 - **Store Sales:** forecasting future dates for many store/product series; must validate past → future. Here each row is one taxi ride and train/test dates overlap, so this is tabular regression with time-derived features.
